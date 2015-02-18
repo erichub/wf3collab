@@ -72,9 +72,13 @@ function getGoogleImg($search, $thumb = false) {
 	return '';
 }
 
-?>
+
+if(!empty($_POST)){
+	$search = $_POST['search_img'];
+	getGoogleImg($search);
+}?>
 <form action='clairaton.php' method='POST'>
-	<input type='text' name='search img'>
+	<input type='text' name='search_img'>
 	<input type='submit' value='ok'>
 </form>
 
